@@ -1,1 +1,3 @@
 # GitaGPT
+
+## Tech Stack used 
