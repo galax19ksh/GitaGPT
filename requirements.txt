@@ -1,0 +1,13 @@
+llama-index
+llama-index-llms-huggingface
+llama-index-embeddings-huggingface
+chromadb
+llama-index-vector-stores-chroma
+#transformers
+#einops
+#bitsandbytes
+#pypdf
+#huggingface_hub==2.23.2
+torch
+gradio
+#streamlit
