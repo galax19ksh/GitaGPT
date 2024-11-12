@@ -1,12 +1,14 @@
 import gradio as gr
 from vector_index import setup_index
-from query_engine import create_query_engine
+from llm import load_llm
+from vector_index import create_embed_model
+#from llama_index.core import Settings
 
-
-# Check if the index exists on disk
+llm = load_llm()
+embed_model = create_embed_model()
 index = setup_index()
 
-query_engine = create_query_engine(index)
+query_engine = index.as_query_engine(streaming=True)
 
 def generate_response(user_query):
     streaming_response = query_engine.query(user_query)
@@ -24,5 +26,4 @@ iface = gr.Interface(
     description="Ask questions and receive wisdom based on the Bhagavad Gita."
 )
 
-if __name__ == "__main__":
-    iface.launch(share=True)
+iface.launch(share=True)
