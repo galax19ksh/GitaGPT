@@ -15,9 +15,6 @@ def create_embed_model():
 
 def create_index(documents):
     embed_model = create_embed_model()
-    Settings.embed_model = embed_model 
-    # Settings.chunk_size = config.CHUNK_SIZE
-    # Settings.llm = llm
 
     db = chromadb.PersistentClient(path="./chroma_db")
     chroma_collection = db.get_or_create_collection("quickstart")
@@ -46,8 +43,6 @@ def setup_index():
     else:
         documents = load_documents()
         index = create_index(documents)
-    llm = setup_llm()
-    embed_model = create_embed_model()
 
     # #global context     
     # Settings.chunk_size = config.CHUNK_SIZE
