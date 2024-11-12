@@ -1,12 +1,18 @@
+import config
 import gradio as gr
 from vector_index import setup_index
 from llm import load_llm
 from vector_index import create_embed_model
-#from llama_index.core import Settings
+from llama_index.core import Settings
 
 llm = load_llm()
 embed_model = create_embed_model()
 index = setup_index()
+
+#global context  (IMPORTANT)   
+Settings.chunk_size = config.CHUNK_SIZE
+Settings.llm = llm
+Settings.embed_model = embed_model
 
 query_engine = index.as_query_engine(streaming=True)
 
