@@ -13,4 +13,6 @@ DATA_PATH = "data"
 TOKENIZER_NAME = "meta-llama/Llama-3.2-1B-Instruct"
 MODEL_NAME = "meta-llama/Llama-3.2-1B-Instruct"
 EMBED_MODEL_NAME = "BAAI/bge-small-en-v1.5"
+CONTEXT_WINDOW = 3096
+MAX_NEW_TOKENS = 256
 CHUNK_SIZE = 512
