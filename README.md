@@ -1,6 +1,8 @@
 # GitaGPT 
 A Bhagavad Gita chatbot/QA based on Retrieval-Augmented Generation (RAG) that will provide wisdom regarding life. Built using *llama3.2* model and *llamaindex*.
 
+![demo]()
+
 ## Tech Stack used 
 framework: `llamaindex`
 
@@ -19,7 +21,7 @@ interface: `gradio` (demo)
 
 RAG is leveraged here along with a small opensource model for the project so that extra compute is not wasted to train a model from scratch or finetuning while also making it flexible.
 
-## Prequirements
+## Pre-requirements
 * In addition to the packages required, you need to have [access](https://huggingface.co/docs/hub/en/models-gated#access-gated-models-as-a-user) to [llama3.2](https://llama.meta.com) models by Meta on [Huggingface](https://huggingface.co/meta-llama). After that, create a [huggingface access token](https://huggingface.co/docs/hub/en/security-tokens).
 
 * A GPU with minimum of 16GB RAM is recommended for smooth and fast inference speed while a CPU can also run quite decently with that much VRAM.
