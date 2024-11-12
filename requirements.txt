@@ -7,7 +7,7 @@ llama-index-vector-stores-chroma
 #einops
 #bitsandbytes
 #pypdf
-#huggingface_hub==2.23.2
+huggingface_hub==0.23.5
 torch
 gradio
 #streamlit
