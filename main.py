@@ -19,16 +19,18 @@ def initialize():
     print("Setting up vector index...")
     index = setup_index()
     print("Done")
+
+    #global context  (IMPORTANT)   
+    Settings.chunk_size = config.CHUNK_SIZE
+    Settings.llm = llm
+    Settings.embed_model = embed_model
     
     # Create query engine
     print("Creating query engine...")
     query_engine = index.as_query_engine(streaming=True)
     print("Done")
     
-    #global context  (IMPORTANT)   
-    Settings.chunk_size = config.CHUNK_SIZE
-    Settings.llm = llm
-    Settings.embed_model = embed_model
+    
            
 
     return query_engine        
